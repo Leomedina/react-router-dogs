@@ -4,12 +4,12 @@ import Nav from './Nav';
 import Routes from './Routes';
 import './styles/App.css';
 
-function App({ dogs }) {
+function App({ dogs, colors }) {
   return (
     <div className="App">
       <BrowserRouter>
         <Nav dogs={dogs} />
-        <Routes dogs={dogs} />
+        <Routes dogs={dogs} colors={colors} />
       </BrowserRouter>
     </div>
   );
@@ -56,6 +56,21 @@ App.defaultProps = {
         "Tubby does not like walks.",
         "Angelina used to hate Tubby, but claims not to anymore."
       ]
+    },
+  ],
+
+  colors: [
+    {
+      name: 'red',
+      color: 'red',
+    },
+    {
+      name: 'blue',
+      color: 'blue',
+    },
+    {
+      name: 'green',
+      color: 'green'
     }
   ]
 }
